@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    color: black;
+}
+
+/* animeJS */
+.animeJS_box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all 0.7s;
+    z-index: 99;
+    animation: BGcolor 1.5s linear infinite;
+}
+    @keyframes BGcolor {
+        to {
+            background-color: black;
+        }
+        25% {
+            background-color: rgb(14, 14, 14);
+        }
+        from {
+            background-color: black;
+        }
+    }
+.animeJS_box.visible {
+    width: 0;
+    overflow: hidden;
+}
+
+.animeContain {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 15s linear infinite;
+}
+    @keyframes rotateCube {
+        to {
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+        }
+        from {
+            transform: perspective(1000px) rotateX(180deg) rotateY(360deg);
+        }
+    }
+.animeBox {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+.animeBox2 {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    position: absolute;
+}
+.animeBox3 {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transform: translateZ(100px);
+    position: absolute;
+}
+.animeStandard {
+    width: 100px;
+    height: 100px;
+    float: left;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.animeStandard2 {
+    width: 100px;
+    height: 100px;
+    float: left;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.animeStandard3 {
+    width: 100px;
+    height: 100px;
+    float: left;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.animePuzzle {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    background: red;
+}
+.animePuzzle:nth-child(1) {
+    transform: translateZ(50px);
+    border:1px solid;
+}
+.animePuzzle:nth-child(2) {
+    transform: translateZ(-50px);
+    border:1px solid;
+}
+.animePuzzle:nth-child(3) {
+    transform: translateX(50px) rotateY(90deg);
+    border:1px solid;
+}
+.animePuzzle:nth-child(4) {
+    transform: translateX(-50px) rotateY(90deg);
+    border:1px solid;
+}
+.animePuzzle:nth-child(5) {
+    transform: translateY(50px) rotateX(90deg);
+    border:1px solid;
+}
+.animePuzzle:nth-child(6) {
+    transform: translateY(-50px) rotateX(90deg);
+    border:1px solid;
+}
+
+.animeJS_box > span {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 20px 0;
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+    text-shadow: 0 0 50px white, -0.25px 0.5px 40px white, -0.5px 0.75px 30px white, -1px 1px 20px white, -2px 2px 10px white;
+    animation: airText 1s linear infinite alternate;
+}
+    @keyframes airText {
+        from {
+            transform: translateY(2px);
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 25px white, -0.25px -0.25px 20px white, -0.5px -0.5px 15px white, -1px -0.75px 10px white, -2px -1px 5px white;
+        }
+    }
+.more {
+    width: 120px;
+    height: 32px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border: none;
+    /* border-radius: 40px; */
+    white-space: nowrap;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 50px white, -0.25px 0.5px 40px white, -0.5px 0.75px 30px white, -1px 1px 20px white, -2px 2px 10px white;
+}
+.more:hover {
+    background-color: white;
+    text-shadow: 0 0 100px white, 0 0 90px white, 0 0 80px white, 0 0 75px white, 0 0 70px white;
+}
+.moreBox {
+    position: relative;
+}
+.moreBox span {
+    display: inline-block;
+    position: absolute;
+    background-color: white;
+}
+.moreBox span:nth-of-type(1) {
+    width: 120px;
+    height: 2px;
+    top: 0;
+    left: 0;
+}
+.moreBox span:nth-of-type(2) {
+    width: 2px;
+    height: 32px;
+    top: 0;
+    right: 0;
+}
+.moreBox span:nth-of-type(3){
+    width: 120px;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+}
+.moreBox span:nth-of-type(4) {
+    width: 2px;
+    height: 32px;
+    bottom: 0;
+    left: 0;
+}
