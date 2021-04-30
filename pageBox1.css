@@ -32,37 +32,44 @@
     animation: BGcolor 1.5s linear infinite;
 }
 .header .logo {
-    font-size: 3rem;
+    font-family: neon;
+    font-size: 4rem;
     font-weight: 600;
-    color: white;
-    animation: airText 1.5s linear infinite alternate-reverse;
+    letter-spacing: 2px;
+    color: rgb(219, 18, 18);
+    animation: filter 6s linear infinite alternate, airText 1.5s linear infinite alternate-reverse;
 }
 .header .nav ul li {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-family: black-hans;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 2px;
     display: inline-block;
     margin: 0 20px;
-    padding: 5px 10px;
+    padding: 5px 10px 0 10px;
+    color:  black;
     background-color: white;
 }
 .header .nav ul li:hover {
     cursor: pointer;
-    text-shadow: 0 0 70px white, 0 0 65px white, 0 0 60px white, 0 0 55px white, -0.25px 0.5px 50px white, -0.5px 0.75px 45px white, -1px 1px 40px white, -2px 2px 35px white;
-
+    text-shadow: 0 0 70px greenyellow, 0 0 65px greenyellow, 0 0 60px greenyellow, 0 0 55px greenyellow, -0.25px 0.5px 50px greenyellow, -0.5px 0.75px 45px
 }
 .main {
     position: absolute;
     top: 45%;
-    left: 25%;
+    left: 45%;
     transform: translate(-50%, -50%);
 }
 .main div {
+    font-family: black-hans;
     font-size: 4em;
     letter-spacing: 15px;
     white-space: nowrap;
+    font-weight: normal;
+    line-height: 2em;
 }
 .main div::first-letter {
-    font-weight: 600;
+    font-size: 1.2em;
 }
 .footer {
     width: 100vw;
@@ -72,22 +79,4 @@
     left: 0;
     background-color: black;
     animation: BGcolor 1.5s linear infinite;
-}
-
-/* button */
-.btn {
-    position: absolute;
-    top: 50%
-}
-.left {
-    left: 200px;
-}
-.right {
-    right: 200px;
-}
-.left.visible {
-    visibility: hidden;
-}
-.right.visible {
-    visibility: hidden;
 }
