@@ -25,6 +25,14 @@
     transform-style: preserve-3d;
     animation: imageSlide 10s linear infinite;
 }
+    @keyframes imageSlide {
+        to {
+            transform: perspective(1000px);
+        }
+        from {
+            transform: perspective(1000px) rotateY(360deg);
+        }
+    }
 .standard .outBox {
     width: 400px;
     height: 600px;
@@ -46,6 +54,5 @@
 }
 
 .pageBox > .more {
-    font-size: 2.5rem;
     z-index: 99;
 }
