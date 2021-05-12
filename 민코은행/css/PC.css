@@ -15,7 +15,7 @@
         overflow: hidden;
     }
     .top_nav_wrap > .top_nav {
-        width: 80vw;
+        width: 60vw;
         margin: 0 auto;
         display: flex;
         justify-content: flex-end;        
@@ -23,8 +23,8 @@
         border-right: 1px solid rgba(0,0,0,0.3);
     }
     .top_nav_wrap > .top_nav > span {
-        margin: 10px 8px;
-        font-size: 13px;
+        margin: 8px 8px;
+        font-size: 12px;
     }
     header {
         width: 100vw;
@@ -32,22 +32,22 @@
         padding: 0 70px;
         display: flex;
         align-items: center;
-        background-color: skyblue;
+        background-color: rgba(135, 207, 235, 0.2);
     }
     header > .logo {
         text-align: center;
-        width: 13vw;
-        font-size: 1.7rem;
+        width: 14vw;
+        font-size: 1.5rem;
         font-weight: 600;
         background-color: white;
         border-radius: 40%/20px;
     }
     header > nav {
-        width: 77vw;
+        width: 75vw;
         height: 100px;
     }
     header > nav > ul {
-        width: 80vw;
+        width: 65vw;
         height: 100px;
         display: flex;
         justify-content: space-between;
@@ -95,9 +95,11 @@
         width: 100vw;
         overflow: hidden;
         /* background-color: orange; */
+        border-top: 1px solid rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
     }
     main > .section_wrap > .first_sec {
-        width: 80vw;
+        width: 60vw;
         height: 400px;
         margin: 50px auto;
         display: flex;
@@ -107,31 +109,49 @@
     }
     main > .section_wrap > .first_sec > .box1 {
         width: 19.5vw;
-        height: 170px;
+        height: 190px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         background-color: white;
-        border: 1px solid rgba(0,0,0,0.1);
+        /* border: 1px solid rgba(0,0,0,0.1); */
     }
     main > .section_wrap > .first_sec > .box1 > div {
         height: 40px;
+        display: flex;
     }
     main > .section_wrap > .first_sec > .box1 > div:nth-child(1){
         font-weight: 600;
         padding-left: 10px;
         line-height: 40px;
-        border-bottom: 1px solid rgba(0,0,0,0.5);
+        border-bottom: 1px solid rgba(0,0,0,0.1);
         background-color: white;
     }
-    main > .section_wrap > .first_sec > .box1 > div:nth-child(2){
-        text-align: end;
+    main > .section_wrap > .first_sec > .box1 > div:nth-child(2) {
+        display: flex;
+        justify-content: flex-end;
         padding-right: 10px;
         line-height: 40px;
         background-color: rgba(0, 0, 0, 0.055);
     }
+    main > .section_wrap > .first_sec > .box1:nth-child(2) > div:nth-child(1){
+        border-bottom: none;
+    }
     main > .section_wrap > .first_sec > .box1 > div > a:hover {
-        font-weight: 600;
+        text-decoration: underline;
+    }
+    main > .section_wrap > .first_sec > .box1 > div > span {
+        height: 100%;
+        border: 1px solid rgba(0,0,0,0.1);
+        padding: 0 10px;
+    }
+    main > .section_wrap > .first_sec > .box1 > div > span:nth-child(1) {
+        margin-left: -10px;
+        border-bottom: none;
+        background: white;
+    }
+    main > .section_wrap > .first_sec > .box1 > div > span:nth-child(2) {
+        background: rgba(135, 207, 235, 0.25);
     }
     main > .aside_wrap {
         width: 100vw;
@@ -140,18 +160,18 @@
         /* background-color: pink; */
     }
     main > .aside_wrap > aside:nth-child(1) {
-        width: 80vw;
+        width: 60vw;
         height: 100px;
         margin: 80px auto;
         display: flex;
         justify-content: space-between;
     }
     main > .aside_wrap > aside > .box2 {
-        width: 9.5vw;
+        width: 7.5vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border: 1px solid rgba(0,0,0,0.2);
+        /* border: 1px solid rgba(0,0,0,0.2); */
     }
     main > .aside_wrap > aside > .box2 > div:nth-child(2) {
         text-align: end;
@@ -159,7 +179,7 @@
         background-color: rgba(0, 0, 0, 0.055);
     }
     main > .aside_wrap > aside > .box2 > div > a:hover {
-        font-weight: 600;
+        text-decoration: underline;
     }
     main > .aside_wrap > aside:nth-child(2) {
         width: 80vw;
@@ -170,28 +190,65 @@
     }
     main > .aside_wrap > aside > .box3 {
         width: 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         margin: 0 10px;
-        border: 1px solid rgba(0,0,0,0.2);
+        /* border: 1px solid rgba(0,0,0,0.2); */
+    }
+    main > .aside_wrap > aside > .box3 > span {
+        padding: 5px 0;
+        font-size: 14px;
+        font-weight: 600;
     }
     .footer_wrap {
         width: 100vw;
         overflow: hidden;
-        /* background-color: greenyellow; */
+        background-color: silver;
     }
     footer {
-        width: 80vw;
-        height: 200px;
-        margin: 10px auto;
-        border: 1px solid;
+        width: 60vw;
+        height: 150px;
+        margin: 0 auto;
+        padding: 20px 0;
+        /* border: 1px solid rgba(0,0,0,0.1); */
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    footer > ul {
+        display: flex;
+        white-space: nowrap;
+        font-size: 13px;
+        margin: 10px 0;
+    }
+    footer > ul > li {
+        padding: 0 5px;
+    }
+    footer > ul > li > a:hover {
+        text-decoration: underline;
+    }
+    footer > div {
+        display: flex;
+        /* padding: 0 5px; */
+        font-size: 15px;
+    }
+    footer > div > div {
+        padding: 0 5px;
+    }
+    footer > div > div > span {
+        padding: 0 5px;
+        font-weight: 600;
     }
     .top {
         width: 35px;
         height: 35px;
         border: none;
-        border-radius: 50%;
+        /* border-radius: 50%; */
         font-weight: 600;
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
     }
 }
