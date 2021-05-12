@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrap {
+    width: 100vw;
+    overflow: hidden;
+}
+.wrap > header {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-align: center;
+    background: silver;
+}
+.wrap > header > button {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: -60px;
+    font-size: 11px;
+    background: rgb(255, 255, 95);
+    border: none;
+    border-radius: 20%/20px;
+}
+.main_wrap {
+    width: 100vw;
+    overflow: hidden;
+}
+.main_wrap > main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.main_wrap > main > .img_wrap {
+    width: 100vw;
+    height: 100vh;
+}
+.main_wrap > main > aside {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.main_wrap > main > aside > span {
+    margin: 3px 0;
+}
+.main_wrap > main > aside > button {
+    width: 75px;
+    height: 25px;
+    margin: 5px 0;
+}
+.main_wrap > .category {
+    width: 60vw;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.main_wrap > .category > ul {
+    display: flex;
+    justify-content: space-around;
+}
+.main_wrap > .category > ul > li {
+    padding: 10px 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.main_wrap > .category > main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.main_wrap > .category > main > figure {
+    width: 13vw;
+    height: 18vw;
+    margin: 50px 0;
+    border: 1px solid rgba(0,0,0,0.1);
+}
