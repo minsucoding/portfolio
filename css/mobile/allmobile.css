@@ -1,0 +1,19 @@
+/* button */
+.btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 20%
+}
+.left {
+    left: 20%;
+}
+.right {
+    right: 20%;
+}
+.left.visible {
+    visibility: hidden;
+}
+.right.visible {
+    visibility: hidden;
+}

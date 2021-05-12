@@ -1,0 +1,90 @@
+@media all and (min-width: 1440px) {
+    .standardWrap {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+    .mainWrap {
+        width: 400vw;
+        height: 100vh;
+        display: flex;
+        position: relative;
+        transition: left 1.5s;
+    }
+    .pageBox {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: #595b83;
+    }
+    .header {
+        width: 100vw;
+        height: 6em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px 40px;
+        background-color: black;
+        animation: BGcolor 5s linear infinite;
+        z-index: 1;
+    }
+    .header .logo {
+        font-family: neon;
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #ff577f;
+        animation: filter 6s linear infinite alternate, airText 3s ease-in-out infinite alternate-reverse;
+    }
+    .header .nav ul li {
+        font-family: black-hans;
+        font-size: 1.1rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+        display: inline-block;
+        margin: 0 10px;
+        padding: 5px 10px;
+        border-radius: 30px;
+        color:  black;
+        background-color: white;
+    }
+    .header .nav ul li:hover {
+        cursor: pointer;
+        text-shadow: 0 0 90px #ff577f,0 0 80px #ff577f,0 0 70px #ff577f, 0 0 65px #ff577f, 0 0 60px #ff577f, 0 0 55px #ff577f, -0.25px 0.5px 50px #ff577f, -0.5px 0.75px 45px #ff577f;
+    }
+    .main {
+        position: absolute;
+        top: 45%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+    }
+    .main div {
+        font-family: black-hans;
+        font-size: 4em;
+        letter-spacing: 15px;
+        white-space: nowrap;
+        font-weight: normal;
+        line-height: 2em;
+        color: white;
+    }
+    .main div::first-letter {
+        font-size: 1.2em;
+    }
+    .footer {
+        width: 100vw;
+        height: 6em;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        animation: BGcolor 5s linear infinite;
+        z-index: 1;
+    }
+    
+}

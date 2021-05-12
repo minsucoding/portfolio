@@ -1,0 +1,152 @@
+@media all and (min-width: 1440px) {
+    .pageBox .phoneBox {
+        width: 1200px;
+        height: 700px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* transform-style: preserve-3d; */
+    }
+    .phoneCover {
+        width: 290px;
+        height: 500px;
+        position: relative;
+        border-radius: 30px;
+        animation: filter 6s linear infinite alternate;
+    }
+    .phoneCover::before, .phoneCover::after {
+        content: "";
+        width: 290px;
+        height: 500px;
+        position: absolute;
+        filter: blur(30px);
+        z-index: -99;
+    }
+    .phoneCover::before {
+        top: -15px;
+        left: -15px;
+        background-color: #ff577f;
+    }
+    .phoneCover::after {
+        bottom: -15px;
+        right: -15px;
+        background-color: #cdfffc;
+    }
+    .phone {
+        width: 290px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 8px 0;
+        border: 3px solid;
+        border-radius: 30px;
+        background-color: rgba(255, 255, 0, 0.1);
+        transform-style: preserve-3d;
+    }
+    .phoneCover:nth-child(1) {
+        background-color: rgba(250, 10, 10, 0.5);
+    }
+    .phoneCover:nth-child(2) {
+        background-color: rgba(10, 250, 10, 0.5);
+    }
+    .phoneCover:nth-child(3) {
+        background-color: rgba(10, 10, 250, 0.5);
+    }
+    
+    .screenTop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .topBTN {
+        margin: 0 5px;
+    }
+    .topBTN:nth-child(1) {
+        width: 55px;
+        height: 12px;
+        border: 1px solid;
+        border-radius: 40px;
+        background-color: black;
+    }
+    .topBTN:nth-child(2) {
+        width: 12px;
+        height: 12px;
+        border: 1px solid;
+        border-radius: 50%;
+        background-color: black;
+    }
+    .screenMid {
+        width: 260px;
+        height: 400px;
+        /* margin-top: -5px; */
+        display: flex;
+        justify-content: center;
+        border: 1px solid;
+        transform-style: preserve-3d;
+        transform: translateZ(200px);
+        transition: all 1s;
+    }
+    /* 자바스크립트로 마우스 마우스 올리면 img 사라지면서 안에 text 보여지게 하고 button클릭시
+    front > back 돌아가게 + 버튼사라짐 구현  */
+    /* 뒤로가기 버튼을 누르면 한 동작들을 그대로 뒤로가는 식으로구현  */
+    /* 홈 버튼을 누르면 최초의 상태로 돌아가게 구현 */
+    .screenMid.rotate {
+        transform: perspective(1500px) translateZ(200px) rotateY(180deg);
+    }
+    .screenFront {
+        width: 260px;
+        height: 400px;
+        background-color: black;
+        text-align: center;
+        font-size: 1.3rem;
+        letter-spacing: 12px;
+        padding-inline-start: 12px;
+        line-height: 300px;
+        color: white;
+        position: relative;
+        filter: brightness(2);
+        transform-style: preserve-3d;
+        animation: BGcolor 2.5s step-end infinite;
+        transform: translateZ(1px) perspective(1500px);
+    }
+    .screenBack {
+        width: 260px;
+        height: 400px;
+        background-color: black;
+        text-align: left;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-style: preserve-3d;
+        transform: translateZ(-1px) rotateY(180deg) perspective(1500px);
+    }
+    .screenBot {
+        width: 100%;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .botBTN:nth-child(2) {
+        width: 60px;
+        height: 30px;
+        padding: 2px 4px;
+        border: 1px solid;
+        border-radius: 6px;
+        text-align: center;
+        line-height: 26px;
+        font-weight: bold;
+    }
+    .botBTN:nth-child(2):hover {
+        background-color: black;
+        color: white;
+    }
+}

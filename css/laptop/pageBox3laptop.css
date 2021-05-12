@@ -1,0 +1,57 @@
+@media all and (max-width: 1439px) and (min-width: 1020px) {
+    .pageBox > .more {
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .pageBox > .threeD_Box{
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+    .threeD_Box.flex {
+        display: flex;
+        background-color: rgba(0, 0, 0, 1);
+    }
+    .threeD_Box .standard {
+        width: 600px;
+        height: 800px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: imageSlide 10s linear infinite;
+    }
+    .standard .outBox {
+        width: 600px;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        transform: rotateY(calc(var(--i)*-72deg)) translateZ(-450px);
+    }
+    .outBox .inBox {
+        width: 500px;
+        height: 350px;
+        border: 1px solid;
+        background-color: white;
+    }
+    
+    .pageBox > .more {
+        width: auto;
+        height: auto;
+        font-size: 1.5rem;
+        z-index: 99;
+    }
+}
